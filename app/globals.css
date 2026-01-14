@@ -1,26 +1,211 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  --color-border: hsl(var(--border));
+  --color-input: hsl(var(--input));
+  --color-ring: hsl(var(--ring));
+  --color-background: hsl(var(--background));
+  --color-foreground: hsl(var(--foreground));
+
+  --color-primary: hsl(var(--primary));
+  --color-primary-foreground: hsl(var(--primary-foreground));
+
+  --color-secondary: hsl(var(--secondary));
+  --color-secondary-foreground: hsl(var(--secondary-foreground));
+
+  --color-destructive: hsl(var(--destructive));
+  --color-destructive-foreground: hsl(var(--destructive-foreground));
+
+  --color-muted: hsl(var(--muted));
+  --color-muted-foreground: hsl(var(--muted-foreground));
+
+  --color-accent: hsl(var(--accent));
+  --color-accent-foreground: hsl(var(--accent-foreground));
+
+  --color-popover: hsl(var(--popover));
+  --color-popover-foreground: hsl(var(--popover-foreground));
+
+  --color-card: hsl(var(--card));
+  --color-card-foreground: hsl(var(--card-foreground));
+
+  --radius-lg: var(--radius);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-sm: calc(var(--radius) - 4px);
+
+  --animate-accordion-down: accordion-down 0.2s ease-out;
+  --animate-accordion-up: accordion-up 0.2s ease-out;
+
+  @keyframes accordion-down {
+    from {
+      height: 0;
+    }
+
+    to {
+      height: var(--radix-accordion-content-height);
+    }
+  }
+
+  @keyframes accordion-up {
+    from {
+      height: var(--radix-accordion-content-height);
+    }
+
+    to {
+      height: 0;
+    }
+  }
+
+  @keyframes spotlight {
+    0% {
+      opacity: 0;
+      transform: translate(-72%, -62%) scale(0.5);
+    }
+
+    100% {
+      opacity: 1;
+      transform: translate(-50%, -40%) scale(1);
+    }
+  }
+
+  --animate-spotlight: spotlight 2s ease .75s 1 forwards;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+@utility bg-grid-white {
+  background-size: 40px 40px;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' width='32' height='32' fill='none' stroke='rgb(255 255 255 / 0.05)'%3e%3cpath d='M0 .5H31.5V32'/%3e%3c/svg%3e");
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@utility bg-grid-small-white {
+  background-size: 20px 20px;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' width='32' height='32' fill='none' stroke='rgb(255 255 255 / 0.05)'%3e%3cpath d='M0 .5H31.5V32'/%3e%3c/svg%3e");
+}
+
+@utility container {
+  margin-inline: auto;
+  padding-inline: 2rem;
+
+  @media (width >=--theme(--breakpoint-sm)) {
+    max-width: none;
+  }
+
+  @media (width >=1400px) {
+    max-width: 1400px;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+:root {
+  /* Pure Black Background */
+  --background: 0 0% 0%;
+  --foreground: 0 0% 100%;
+
+  /* Darker Cards */
+  --card: 222 47% 11%;
+  /* Dark Blue-ish Black for subtle card distinction if needed, otherwise pure black/zinc-950 */
+  --card-foreground: 0 0% 98%;
+
+  --popover: 0 0% 5%;
+  --popover-foreground: 0 0% 98%;
+
+  /* Vibrant Red (Matching Logo) */
+  --primary: 0 72% 51%;
+  --primary-foreground: 0 0% 100%;
+
+  /* Dark Gray Secondary */
+  --secondary: 217.2 32.6% 17.5%;
+  --secondary-foreground: 0 0% 98%;
+
+  --muted: 217.2 32.6% 17.5%;
+  --muted-foreground: 215 20.2% 65.1%;
+
+  --accent: 217.2 32.6% 17.5%;
+  --accent-foreground: 0 0% 98%;
+
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 0 0% 98%;
+
+  --border: 217.2 32.6% 17.5%;
+  --input: 217.2 32.6% 17.5%;
+  --ring: 0 72% 51%;
+
+  --radius: 0.5rem;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  /* Hide Next.js Dev Indicators */
+  body [data-nextjs-toast],
+  body [data-nextjs-toast-wrapper] {
+    display: none !important;
+  }
+
+  nextjs-portal,
+  [data-nextjs-dialog-overlay],
+  #next-route-announcer {
+    display: none !important;
+    pointer-events: none !important;
+    visibility: hidden !important;
+    z-index: -9999 !important;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+  }
+}
+
+@theme {
+  --color-neon-red: #FF003c;
+  --color-neon-cyan: #00F0FF;
+  --color-cyber-black: #050505;
+}
+
+/* CYBERPUNK UTILITIES */
+@utility bg-cyber-grid {
+  background-size: 40px 40px;
+  background-image:
+    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  mask-image: radial-gradient(circle at center, black 40%, transparent 100%);
+}
+
+@utility scanlines {
+  background: linear-gradient(to bottom,
+      rgba(255, 255, 255, 0),
+      rgba(255, 255, 255, 0) 50%,
+      rgba(0, 0, 0, 0.2) 50%,
+      rgba(0, 0, 0, 0.2));
+  background-size: 100% 4px;
+  pointer-events: none;
+  z-index: 9999;
+}
+
+@utility glitch-text {
+  text-shadow:
+    2px 0 var(--color-neon-red),
+    -2px 0 var(--color-neon-cyan);
+  animation: glitch 1s infinite linear alternate-reverse;
+}
+
+@keyframes glitch {
+  0% {
+    text-shadow: 2px 0 var(--color-neon-red), -2px 0 var(--color-neon-cyan);
+  }
+
+  25% {
+    text-shadow: -2px 0 var(--color-neon-red), 2px 0 var(--color-neon-cyan);
+  }
+
+  50% {
+    text-shadow: 2px 0 var(--color-neon-cyan), -2px 0 var(--color-neon-red);
+  }
+
+  75% {
+    text-shadow: -2px 0 var(--color-neon-cyan), 2px 0 var(--color-neon-red);
+  }
+
+  100% {
+    text-shadow: 2px 0 var(--color-neon-red), -2px 0 var(--color-neon-cyan);
+  }
 }
