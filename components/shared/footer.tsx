@@ -51,7 +51,7 @@ export function Footer() {
                         <div className="space-y-6">
                             <h4 className="text-white font-medium text-lg tracking-wide border-b border-zinc-800 pb-2 inline-block">Company</h4>
                             <ul className="space-y-4">
-                                {['Home', 'About Us', 'How We Work', 'FAQ'].map((item) => (
+                                {['Home', 'About', 'How We Work', 'FAQ'].map((item) => (
                                     <li key={item}>
                                         <Link href={item === 'Home' ? '/' : `/${item.toLowerCase().replace(/ /g, '-')}`} className="text-zinc-500 hover:text-red-400 transition-colors duration-300 block hover:translate-x-1">
                                             {item}
