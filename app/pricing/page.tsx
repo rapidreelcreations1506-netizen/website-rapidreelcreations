@@ -59,8 +59,8 @@ export default function PricingPage() {
                                 </div>
                                 <h3 className="text-lg md:text-xl font-bold text-zinc-400 uppercase tracking-widest mb-2">The Spark</h3>
                                 <div className="flex items-baseline gap-1">
-                                    <span className="text-3xl md:text-4xl font-black text-white">₹1,200</span>
-                                    <span className="text-sm text-zinc-500 font-medium">/ hour</span>
+                                    <span className="text-3xl md:text-4xl font-black text-white">₹1,199</span>
+                                    <span className="text-sm text-zinc-500 font-medium">/ session</span>
                                 </div>
                                 <p className="text-zinc-500 text-sm mt-4 leading-relaxed">
                                     The entry point. Perfect for quick shoots, specific clips, or testing the waters with professional quality.
@@ -72,7 +72,8 @@ export default function PricingPage() {
                                     "iPhone 14+ Models (Log Profile)",
                                     "Professional Audio",
                                     "Professional Video Editing",
-                                    "30-45 Mins Delivery"
+                                    "30-45 Mins Delivery",
+                                    "Extra Hours: ₹799/hr"
                                 ].map((item, i) => (
                                     <li key={i} className="flex items-center gap-3 text-zinc-300 text-sm">
                                         <Check className="w-4 h-4 text-zinc-600" />
@@ -87,7 +88,7 @@ export default function PricingPage() {
                         </div>
                     </motion.div>
 
-                    {/* Tier 2: The Ignite (Retainer - Highlighted) */}
+                    {/* Tier 2: Monthly Package (Retainer - Highlighted) */}
                     <motion.div
                         initial={{ opacity: 0, y: -20 }}
                         animate={{ opacity: 1, y: 0 }}
@@ -112,7 +113,7 @@ export default function PricingPage() {
                                     <div className="w-14 h-14 bg-red-600/20 rounded-xl flex items-center justify-center mb-4 border border-red-500/50 shadow-[0_0_15px_rgba(220,38,38,0.3)]">
                                         <Flame className="w-7 h-7 text-red-500" />
                                     </div>
-                                    <h3 className="text-lg md:text-xl font-bold text-red-500 uppercase tracking-widest mb-2">The Ignite</h3>
+                                    <h3 className="text-lg md:text-xl font-bold text-red-500 uppercase tracking-widest mb-2">Monthly Package</h3>
                                     <div className="flex items-baseline gap-1">
                                         <span className="text-4xl md:text-5xl font-black text-white">Retainer</span>
                                     </div>
@@ -209,7 +210,7 @@ export default function PricingPage() {
                         answer="You aren't paying for a person with a phone. You are paying for a production system, professional lighting/audio, and a strategy designed to generate ROI. Reliability and speed cost money."
                     />
                     <FaqItem
-                        question="What is included in the 'Ignite' Retainer?"
+                        question="What is included in the 'Monthly Package'?"
                         answer="Everything you need to grow. We handle the ideation, the shoot, the edit, and the delivery. It's a 'Done-For-You' content machine."
                     />
                     <FaqItem
