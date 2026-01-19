@@ -25,9 +25,8 @@ export const ExpandableCards = ({
                 <div
                     key={item.title}
                     className={cn(
-                        "relative flex-1 h-full min-h-[200px] md:min-h-full rounded-2xl overflow-hidden cursor-pointer transition-all duration-500 ease-in-out",
-                        hoveredIndex === index ? "flex-[3] grayscale-0 ring-2 ring-red-500 z-10" : "flex-[1] grayscale-0 md:grayscale",
-                        hoveredIndex !== null && hoveredIndex !== index && "opacity-50"
+                        "relative flex-1 h-full min-h-[200px] md:min-h-full rounded-2xl overflow-hidden cursor-pointer transition-all duration-500 ease-in-out hover:flex-[3] group",
+                        // removed conditional classes
                     )}
                     onMouseEnter={() => setHoveredIndex(index)}
                     onMouseLeave={() => setHoveredIndex(null)}
@@ -42,8 +41,8 @@ export const ExpandableCards = ({
 
                     {/* Dark Overlay */}
                     <div className={cn(
-                        "absolute inset-0 bg-black/60 transition-opacity duration-300",
-                        hoveredIndex === index ? "opacity-20" : "opacity-60"
+                        "absolute inset-0 bg-black/60 transition-opacity duration-300 group-hover:opacity-20",
+                        // removed conditional classes
                     )} />
 
                     {/* Content Container */}

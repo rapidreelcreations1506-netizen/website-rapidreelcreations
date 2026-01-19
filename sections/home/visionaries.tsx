@@ -1,6 +1,7 @@
 "use client"
 import React from "react"
 import Image from "next/image"
+import Link from "next/link"
 import { cn } from "@/lib/utils"
 
 const team = [
@@ -72,11 +73,11 @@ export function VisionariesSection() {
                 {/* Join CTA */}
                 <div className="mt-16 text-center">
                     <p className="text-zinc-500 mb-6 font-medium">Think you have the eye?</p>
-                    <a href="/join-creator">
+                    <Link href="/join-creator">
                         <button className="px-8 py-4 rounded-full border border-zinc-800 bg-zinc-900/50 text-white font-bold hover:bg-red-600 hover:border-red-600 transition-all duration-300 shadow-lg hover:shadow-red-900/20 group">
                             Join the Roster <span className="group-hover:translate-x-1 inline-block transition-transform ml-2">→</span>
                         </button>
-                    </a>
+                    </Link>
                 </div>
             </div>
         </section>

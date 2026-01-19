@@ -1,6 +1,12 @@
 import { Navbar } from "@/components/shared/navbar";
 import { Footer } from "@/components/shared/footer";
 
+
+export const metadata = {
+    title: "Terms & Conditions | RapidReel Creations",
+    description: "Read our Terms & Conditions to understand the rules and regulations for using our website and services.",
+}
+
 export default function TermsPage() {
     return (
         <main className="min-h-screen bg-black text-white selection:bg-red-500/30 font-sans">

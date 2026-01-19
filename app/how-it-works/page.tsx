@@ -3,6 +3,11 @@ import { Footer } from "@/components/shared/footer"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Camera, Clapperboard, Mail, Send } from "lucide-react"
 
+export const metadata = {
+    title: "How It Works | RapidReel Creations",
+    description: "Our streamlined 4-step process: Brief, Shoot, Magic Edit, and Deliver. Professional video editing simplified.",
+}
+
 const steps = [
     { icon: <Mail className="h-6 w-6" />, title: "1. Brief & Contact", desc: "Fill out our form or book a call. We discuss your vision, goals, and timeline." },
     { icon: <Camera className="h-6 w-6" />, title: "2. Shoot / Transfer", desc: "We schedule the shoot OR you send us your raw footage via our secure portal." },

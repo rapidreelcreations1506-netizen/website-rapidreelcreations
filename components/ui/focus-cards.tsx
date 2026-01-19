@@ -8,23 +8,16 @@ export const Card = React.memo(
     ({
         card,
         index,
-        hovered,
-        setHovered,
     }: {
         card: any;
         index: number;
-        hovered: number | null;
-        setHovered: React.Dispatch<React.SetStateAction<number | null>>;
     }) => {
         return (
             <Link
                 href={card.href || "#"}
                 target="_blank"
-                onMouseEnter={() => setHovered(index)}
-                onMouseLeave={() => setHovered(null)}
                 className={cn(
-                    "rounded-2xl relative bg-zinc-900 border border-white/5 overflow-hidden h-60 md:h-[22rem] w-full transition-all duration-300 ease-out",
-                    hovered !== null && hovered !== index && "blur-sm scale-[0.98] opacity-50"
+                    "rounded-2xl relative bg-zinc-900 border border-white/5 overflow-hidden h-60 md:h-[22rem] w-full transition-all duration-300 ease-out group"
                 )}
             >
                 <Image
@@ -63,9 +56,8 @@ type Card = {
     href: string;
 };
 
-export function FocusCards({ cards }: { cards: Card[] }) {
-    const [hovered, setHovered] = useState<number | null>(null);
 
+export function FocusCards({ cards }: { cards: Card[] }) {
     if (!cards) return null;
 
     return (
@@ -75,8 +67,6 @@ export function FocusCards({ cards }: { cards: Card[] }) {
                     key={card.title + index}
                     card={card}
                     index={index}
-                    hovered={hovered}
-                    setHovered={setHovered}
                 />
             ))}
         </div>

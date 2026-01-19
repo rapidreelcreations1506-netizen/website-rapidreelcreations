@@ -22,8 +22,8 @@ export const metadata: Metadata = {
     default: "RapidReel Creations | Professional Video Editing",
     template: "%s | RapidReel Creations"
   },
-  description: "Capture. Edit. Deliver. We turn raw footage into viral masterpieces. Professional video editing services for creators, brands, and events.",
-  keywords: ["video editing", "reels editor", "portfolio", "creative agency", "video production", "filmmaking", "visual storytelling"],
+  description: "RapidReel Creations is a professional video editing service helping creators, influencers, and businesses turn raw footage into high-performing content. We specialize in social media reels, YouTube shorts, and promotional videos.",
+  keywords: ["video editing services", "social media reels", "YouTube shorts", "promotional videos", "video editor for creators", "highlight edits", "RapidReel Creations"],
   openGraph: {
     title: "RapidReel Creations | Professional Video Editing",
     description: "Capture. Edit. Deliver. Professional video editing services for creators and brands.",
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     siteName: "RapidReel Creations",
     images: [
       {
-        url: "/images/og-image.jpg", // Ensure this exists or use a generic portfolio image
+        url: "/images/logo.jpg", // Using valid brand logo
         width: 1200,
         height: 630,
         alt: "RapidReel Creations Portfolio",
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "RapidReel Creations",
     description: "Professional video editing for the modern web.",
-    // images: ["/images/og-image.jpg"],
+    images: ["/images/logo.jpg"],
   },
   icons: {
     icon: "/images/tab-logo.png",
@@ -62,6 +62,9 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-black text-white relative`}
       >
+        {/* Google Search Console Verification */}
+        <meta name="google-site-verification" content="YOUR_GOOGLE_VERIFICATION_CODE_HERE" />
+
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -77,7 +80,7 @@ export default function RootLayout({
               ],
               "contactPoint": {
                 "@type": "ContactPoint",
-                "telephone": "+91-9999999999",
+                "telephone": "+91 7780131283",
                 "contactType": "customer service"
               }
             })

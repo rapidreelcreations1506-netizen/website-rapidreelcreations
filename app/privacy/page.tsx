@@ -1,6 +1,12 @@
 import { Navbar } from "@/components/shared/navbar";
 import { Footer } from "@/components/shared/footer";
 
+
+export const metadata = {
+    title: "Privacy Policy | RapidReel Creations",
+    description: "Read our Privacy Policy to understand how we collect, use, and protect your personal information.",
+}
+
 export default function PrivacyPage() {
     return (
         <main className="min-h-screen bg-black text-white selection:bg-red-500/30 font-sans">
