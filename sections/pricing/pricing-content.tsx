@@ -37,7 +37,7 @@ export function PricingContent() {
                             Invest in <br /> <span className="text-red-600 drop-shadow-[0_0_25px_rgba(220,38,38,0.4)]">Dominance.</span>
                         </h1>
                         <p className="text-neutral-400 text-base md:text-xl max-w-2xl mx-auto leading-relaxed border-t border-b border-white/5 py-4 md:py-6">
-                            We don't sell "hours". We sell <span className="text-white font-bold">Attention</span>. <br />
+                            We don&apos;t sell &quot;hours&quot;. We sell <span className="text-white font-bold">Attention</span>. <br />
                             Choose the level of impact your brand requires.
                         </p>
                     </motion.div>
@@ -65,7 +65,7 @@ export function PricingContent() {
                                 </div>
                                 <h3 className="text-lg md:text-xl font-bold text-zinc-400 uppercase tracking-widest mb-2">The Spark</h3>
                                 <div className="flex items-baseline gap-1">
-                                    <span className="text-3xl md:text-4xl font-black text-white">₹1,199</span>
+                                    <span className="text-3xl md:text-4xl font-black text-white">₹1,399</span>
                                     <span className="text-sm text-zinc-500 font-medium">/ session</span>
                                 </div>
                                 <p className="text-zinc-500 text-sm mt-4 leading-relaxed">
@@ -79,7 +79,7 @@ export function PricingContent() {
                                     "Professional Audio",
                                     "Professional Video Editing",
                                     "30-45 Mins Delivery",
-                                    "Extra Hours: ₹799/hr"
+                                    "Extra Hours: ₹899/hr"
                                 ].map((item, i) => (
                                     <li key={i} className="flex items-center gap-3 text-zinc-300 text-sm">
                                         <Check className="w-4 h-4 text-zinc-600" />

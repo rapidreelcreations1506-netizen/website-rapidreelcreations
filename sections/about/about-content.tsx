@@ -178,7 +178,77 @@ export function AboutContent() {
                 </div>
             </section>
 
+            {/* 5. The Architect (Developer Spotlight) */}
+            <section className="py-12 md:py-24 bg-black border-t border-white/5 relative overflow-hidden">
+                <div className="absolute inset-0 bg-grid-white/[0.02] -z-10" />
+                <div className="container px-4 mx-auto">
+                    <div className="text-center mb-12">
+                        <h2 className="text-3xl md:text-4xl font-bold text-white mb-3">The <span className="text-red-600">Architect</span></h2>
+                        <p className="text-zinc-500 text-sm md:text-base">The engineering mind behind the digital experience.</p>
+                    </div>
+
+                    <div className="max-w-2xl mx-auto">
+                        <CardSpotlight className="flex flex-col items-center text-center bg-zinc-950/50 border-zinc-800 p-6 md:p-10 overflow-hidden relative" color="#DC2626" radius={300}>
+
+                            {/* Circular Image - Smaller & Responsive */}
+                            <div className="relative w-32 h-32 md:w-40 md:h-40 mb-5 rounded-full p-1 bg-gradient-to-br from-red-600 to-black shrink-0">
+                                <div className="w-full h-full rounded-full overflow-hidden relative border-4 border-black">
+                                    <Image
+                                        src="/images/developer-siva.jpg"
+                                        alt="Goram Siva Prasad - Tech Lead"
+                                        fill
+                                        className="object-cover object-top hover:scale-110 transition-transform duration-700"
+                                        sizes="(max-width: 768px) 150px, 200px"
+                                    />
+                                </div>
+                                <div className="absolute bottom-1 right-1 w-4 h-4 md:w-5 md:h-5 bg-green-500 border-2 md:border-4 border-black rounded-full z-10" title="Available for Hire">
+                                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                                </div>
+                            </div>
+
+                            {/* Content - Compact Typography */}
+                            <div className="relative z-10 flex flex-col items-center w-full">
+
+                                <h3 className="text-2xl md:text-3xl font-black text-white mb-1 tracking-tighter">
+                                    Goram Siva
+                                </h3>
+                                <p className="text-red-500 text-sm md:text-base font-bold tracking-widest uppercase mb-4">
+                                    Lead Fullstack Engineer
+                                </p>
+
+                                <p className="text-zinc-400 leading-relaxed mb-6 text-sm md:text-base max-w-lg">
+                                    The architect behind <span className="text-white">RapidReel Creations</span>. I build high-performance digital experiences that merge cinematic aesthetics with robust engineering.
+                                </p>
+
+                                {/* Contact Grid - Stacked for Mobile, Row for Tablet+ */}
+                                <div className="w-full max-w-md">
+                                    <div className="p-1 rounded-xl bg-gradient-to-b from-white/10 to-transparent">
+                                        <div className="bg-black/80 backdrop-blur-md rounded-lg p-4 border border-white/5">
+                                            <p className="text-zinc-500 text-xs font-medium mb-3 uppercase tracking-wider">Accepting Freelance Projects</p>
+                                            <div className="flex flex-col sm:flex-row gap-3">
+                                                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=mrsivagoram@gmail.com" target="_blank" rel="noopener noreferrer" className="relative z-20 flex-1 flex items-center justify-center gap-2 group p-3 rounded-lg bg-zinc-900/50 border border-zinc-800 hover:border-red-600/50 hover:bg-red-600/10 transition-all duration-300">
+                                                    <div className="p-1.5 rounded bg-zinc-800 group-hover:bg-red-600 transition-colors">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect width="20" height="16" x="2" y="4" rx="2" /><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" /></svg>
+                                                    </div>
+                                                    <span className="text-xs md:text-sm font-medium text-zinc-300 group-hover:text-white transition-colors truncate">Email Me</span>
+                                                </a>
+                                                <a href="https://wa.me/919505231281" target="_blank" rel="noopener noreferrer" className="relative z-20 flex-1 flex items-center justify-center gap-2 group p-3 rounded-lg bg-zinc-900/50 border border-zinc-800 hover:border-red-600/50 hover:bg-red-600/10 transition-all duration-300">
+                                                    <div className="p-1.5 rounded bg-zinc-800 group-hover:bg-red-600 transition-colors">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" /></svg>
+                                                    </div>
+                                                    <span className="text-xs md:text-sm font-medium text-zinc-300 group-hover:text-white transition-colors">WhatsApp Me</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </CardSpotlight>
+                    </div>
+                </div>
+            </section>
+
             <Footer />
-        </main>
+        </main >
     );
 }
