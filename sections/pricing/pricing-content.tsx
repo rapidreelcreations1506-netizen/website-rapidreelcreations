@@ -66,7 +66,7 @@ export function PricingContent() {
                                 <h3 className="text-lg md:text-xl font-bold text-zinc-400 uppercase tracking-widest mb-2">The Spark</h3>
                                 <div className="flex items-baseline gap-1">
                                     <span className="text-3xl md:text-4xl font-black text-white">₹1,399</span>
-                                    <span className="text-sm text-zinc-500 font-medium">/ session</span>
+                                    <span className="text-sm text-zinc-500 font-medium">/ hour</span>
                                 </div>
                                 <p className="text-zinc-500 text-sm mt-4 leading-relaxed">
                                     The entry point. Perfect for quick shoots, specific clips, or testing the waters with professional quality.
